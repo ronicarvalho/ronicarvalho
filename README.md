@@ -64,11 +64,11 @@
 │  > ROLE : Senior Software Engineer (MarTech/Loyalty)                         │
 │  > LOG  : Microservices, Ports & Adapters, Java, Spring, K8s, Kafka          │
 │                                                                              │
-│  [ 2021 - 2023 ] XP Investimentos ──────────────────────── [ STATUS: OK ]    │
+│  [ 2021 - 2023 ] XP Investimentos ──────────────────────── [ MEMORY: DUMP ]  │
 │  > ROLE : Senior Software Engineer (Private Bank / MFO)                      │
 │  > LOG  : Cloud-native, event-driven, .NET 6, React, Kubernetes, Kafka       │
 │                                                                              │
-│  [ 2021 - 2025 ] TSCO Angola ───────────────────────────── [ STATUS: OK ]    │
+│  [ 2021 - 2025 ] TSCO Angola ───────────────────────────── [ MEMORY: DUMP ]  │
 │  > ROLE : DevOps Engineer Consultant                                         │
 │  > LOG  : Architecture advisory, Azure DevOps, CI/CD pipeline design         │
 │                                                                              │
