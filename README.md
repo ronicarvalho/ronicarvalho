@@ -158,7 +158,7 @@
 
        6000-DISPLAY-LINKS.
            DISPLAY '>>> 060. OPEN_COM_PORTS (CONTACT_NETWORKS)'.
-           DISPLAY '    LINKEDIN...: <a href="https://www.linkedin.com/in/roni-peterson-carvalho-roni-b75385281">CONNECT 0x01</a>'.
+           DISPLAY '    LINKEDIN...: <a href="https://www.linkedin.com/in/ronicarvalho">CONNECT 0x01</a>'.
            DISPLAY '    GITHUB.....: <a href="https://github.com/ronicarvalho">CONNECT 0x02</a>'.
            DISPLAY '    EMAIL......: <a href="mailto:roni.carvalho@protonmail.com">SEND_MAIL 0x03</a>'.
            DISPLAY ' '.
