@@ -1,169 +1,83 @@
+<!-- HEADER BANNER -->
 <div align="center">
-
-# `RONI-CARVALHO.CBL`
-
+  <img src="header.png" alt="Roni Carvalho Banner" width="100%" />
 </div>
 
-```cobol
-       IDENTIFICATION DIVISION.
-       PROGRAM-ID.        RONI-CARVALHO-PROFILE.
-       AUTHOR.            RONI CARVALHO.
-       DATE-COMPILED.     CURRENT-SYSTEM-DATE.
-       REMARKS.           SENIOR SOFTWARE ENGINEER & SOFTWARE ARCHITECT.
+<br />
 
-       ENVIRONMENT DIVISION.
-       CONFIGURATION SECTION.
-       SOURCE-COMPUTER.   DISTRIBUTED-CLOUD-MAINFRAME.
-       OBJECT-COMPUTER.   KUBERNETES-CLUSTER-NODE.
-
-       INPUT-OUTPUT SECTION.
-       FILE-CONTROL.
-           SELECT COM-PORTS ASSIGN TO "NETWORK-LINKS".
-
-       DATA DIVISION.
-       FILE SECTION.
-       FD  COM-PORTS.
-       01  LINK-RECORD             PIC X(100).
-
-       WORKING-STORAGE SECTION.
-       01  WS-PROFILE-DATA.
-           05 WS-NAME              PIC X(30) VALUE 'Roni Carvalho'.
-           05 WS-TITLE             PIC X(50) VALUE 'Sr. Software Engineer & Architect'.
-           05 WS-EXPERIENCE        PIC X(20) VALUE '20+ Years Uptime'.
-           05 WS-LOCATION          PIC X(20) VALUE 'Global (Remote)'.
-
-       01  WS-CORE-ARCHITECTURE.
-           05 WS-PROCESSOR         PIC X(50) VALUE '.NET C# / Spring Java / Python / Node.js'.
-           05 WS-MEMORY            PIC X(50) VALUE 'Cloud / Kubernetes / Docker / Distributed'.
-           05 WS-BASE-OS           PIC X(50) VALUE 'Event-Driven / Clean Architecture'.
-           05 WS-CAPABILITY        PIC X(60) VALUE 'High Scalability, Resilience, Complex Integrations'.
-
-       01  WS-COMPETENCIES.
-           05 WS-COMP-1            PIC X(40) VALUE '[X] Cloud & Distributed Systems'.
-           05 WS-COMP-2            PIC X(40) VALUE '[X] Software Arch & Design Patterns'.
-           05 WS-COMP-3            PIC X(40) VALUE '[X] Event-Driven Architectures'.
-           05 WS-COMP-4            PIC X(40) VALUE '[X] DevOps & Platform Engineering'.
-           05 WS-COMP-5            PIC X(40) VALUE '[X] Domain-Driven & Clean Architecture'.
-           05 WS-COMP-6            PIC X(40) VALUE '[X] Software Quality (TDD / BDD)'.
-           05 WS-COMP-7            PIC X(40) VALUE '[X] Microservices & Choreography'.
-           05 WS-COMP-8            PIC X(40) VALUE '[X] CI/CD Pipelines & GitOps'.
-
-       01  WS-TECH-STACK.
-           05 WS-BACKEND           PIC X(60) VALUE '.NET, Java, Spring, Python, Node, Go'.
-           05 WS-FRONTEND          PIC X(60) VALUE 'React, Vue, JavaScript (ES6+)'.
-           05 WS-CLOUD             PIC X(60) VALUE 'Azure, AWS, GCP, K8s, Docker'.
-           05 WS-DATABASES         PIC X(60) VALUE 'SQL Server, Oracle, PostgreSQL, MongoDB'.
-           05 WS-MESSAGING         PIC X(60) VALUE 'Kafka, REST, gRPC, WCF, BizTalk'.
-
-       01  WS-PROFESSIONAL-HISTORY.
-           05 WS-JOB-1-YEARS       PIC X(15) VALUE '2023 - CURR'.
-           05 WS-JOB-1-COMPANY     PIC X(30) VALUE 'Capitani Group / Lojas Renner'.
-           05 WS-JOB-1-ROLE        PIC X(40) VALUE 'Sr. Software Eng (MarTech/Loyalty)'.
-           05 WS-JOB-2-YEARS       PIC X(15) VALUE '2021 - 2023'.
-           05 WS-JOB-2-COMPANY     PIC X(30) VALUE 'XP Investimentos'.
-           05 WS-JOB-2-ROLE        PIC X(40) VALUE 'Sr. Software Engineer (Private Bank)'.
-           05 WS-JOB-3-YEARS       PIC X(15) VALUE '2021 - 2025'.
-           05 WS-JOB-3-COMPANY     PIC X(30) VALUE 'TSCO Angola'.
-           05 WS-JOB-3-ROLE        PIC X(40) VALUE 'DevOps Engineer Consultant'.
-           05 WS-JOB-4-YEARS       PIC X(15) VALUE '2013 - 2021'.
-           05 WS-JOB-4-COMPANY     PIC X(30) VALUE 'Angola Prev'.
-           05 WS-JOB-4-ROLE        PIC X(40) VALUE 'Sr. Software Consultant'.
-           05 WS-JOB-5-YEARS       PIC X(15) VALUE '1998 - 2013'.
-           05 WS-JOB-5-COMPANY     PIC X(30) VALUE 'Multiple Enterprises'.
-           05 WS-JOB-5-ROLE        PIC X(40) VALUE 'Software Engineer / Developer'.
-
-       01  WS-EDUCATION.
-           05 WS-EDU-1             PIC X(60) VALUE 'MBA in Project Management (AIEC) - In Progress'.
-           05 WS-EDU-2             PIC X(60) VALUE 'Extension in Financial Mathematics (AIEC)'.
-           05 WS-EDU-3             PIC X(60) VALUE 'Systems Analysis and Development (AIEC)'.
-
-       01  WS-LANGUAGES.
-           05 WS-LANG-PT           PIC X(30) VALUE 'Portuguese [||||||||||] 100%'.
-           05 WS-LANG-EN           PIC X(30) VALUE 'English    [||||||    ]  65%'.
-
-       PROCEDURE DIVISION.
-       0000-MAIN-PROCESSING.
-           DISPLAY '**************************************************************'.
-           DISPLAY '* SYSTEM INITIALIZATION............................ STATUS: OK'.
-           DISPLAY '* LOADING PROFILE_DATA.SYS......................... STATUS: OK'.
-           DISPLAY '**************************************************************'.
-           DISPLAY ' '.
-           
-           PERFORM 1000-DISPLAY-PROFILE.
-           PERFORM 2000-DISPLAY-ARCHITECTURE.
-           PERFORM 3000-DISPLAY-COMPETENCIES.
-           PERFORM 4000-DISPLAY-HISTORY.
-           PERFORM 5000-DISPLAY-EDUCATION.
-           PERFORM 6000-DISPLAY-LINKS.
-           
-           DISPLAY '**************************************************************'.
-           DISPLAY '* END OF EXECUTION. RETURN CODE 00000.                       *'.
-           DISPLAY '**************************************************************'.
-           STOP RUN.
-
-       1000-DISPLAY-PROFILE.
-           DISPLAY '>>> 010. USER_PROFILE'.
-           DISPLAY '    NAME.......: ' WS-NAME.
-           DISPLAY '    TITLE......: ' WS-TITLE.
-           DISPLAY '    UPTIME.....: ' WS-EXPERIENCE.
-           DISPLAY '    LOCATION...: ' WS-LOCATION.
-           DISPLAY ' '.
-
-       2000-DISPLAY-ARCHITECTURE.
-           DISPLAY '>>> 020. CORE_ARCHITECTURE'.
-           DISPLAY '    PROCESSOR..: ' WS-PROCESSOR.
-           DISPLAY '    MEMORY.....: ' WS-MEMORY.
-           DISPLAY '    BASE OS....: ' WS-BASE-OS.
-           DISPLAY '    CAPABILITY.: ' WS-CAPABILITY.
-           DISPLAY ' '.
-
-       3000-DISPLAY-COMPETENCIES.
-           DISPLAY '>>> 030. COMPETENCIES_AND_STACK'.
-           DISPLAY '    ' WS-COMP-1 ' | ' WS-COMP-2.
-           DISPLAY '    ' WS-COMP-3 ' | ' WS-COMP-4.
-           DISPLAY '    ' WS-COMP-5 ' | ' WS-COMP-6.
-           DISPLAY '    ' WS-COMP-7 ' | ' WS-COMP-8.
-           DISPLAY ' '.
-           DISPLAY '    --- TECH STACK DRIVERS ---'.
-           DISPLAY '    BACKEND....: ' WS-BACKEND.
-           DISPLAY '    FRONTEND...: ' WS-FRONTEND.
-           DISPLAY '    CLOUD......: ' WS-CLOUD.
-           DISPLAY '    DATABASES..: ' WS-DATABASES.
-           DISPLAY '    MESSAGING..: ' WS-MESSAGING.
-           DISPLAY ' '.
-
-       4000-DISPLAY-HISTORY.
-           DISPLAY '>>> 040. EXECUTION_LOG (PROFESSIONAL HISTORY)'.
-           DISPLAY '    [' WS-JOB-1-YEARS '] ' WS-JOB-1-COMPANY.
-           DISPLAY '      > ROLE: ' WS-JOB-1-ROLE.
-           DISPLAY '    [' WS-JOB-2-YEARS '] ' WS-JOB-2-COMPANY.
-           DISPLAY '      > ROLE: ' WS-JOB-2-ROLE.
-           DISPLAY '    [' WS-JOB-3-YEARS '] ' WS-JOB-3-COMPANY.
-           DISPLAY '      > ROLE: ' WS-JOB-3-ROLE.
-           DISPLAY '    [' WS-JOB-4-YEARS '] ' WS-JOB-4-COMPANY.
-           DISPLAY '      > ROLE: ' WS-JOB-4-ROLE.
-           DISPLAY '    [' WS-JOB-5-YEARS '] ' WS-JOB-5-COMPANY.
-           DISPLAY '      > ROLE: ' WS-JOB-5-ROLE.
-           DISPLAY '    ... (EARLIER LOGS ARCHIVED / DUMPED) ...'.
-           DISPLAY ' '.
-
-       5000-DISPLAY-EDUCATION.
-           DISPLAY '>>> 050. SYSTEM_VARIABLES'.
-           DISPLAY '    EDUCATION_01: ' WS-EDU-1.
-           DISPLAY '    EDUCATION_02: ' WS-EDU-2.
-           DISPLAY '    EDUCATION_03: ' WS-EDU-3.
-           DISPLAY ' '.
-           DISPLAY '    LANGUAGES: ' WS-LANG-PT ' | ' WS-LANG-EN.
-           DISPLAY ' '.
-
-       6000-DISPLAY-LINKS.
-           DISPLAY '>>> 060. OPEN_COM_PORTS (CONTACT_NETWORKS)'.
-           DISPLAY '    LINKEDIN...: https://www.linkedin.com/in/ronicarvalho'.
-           DISPLAY '    GITHUB.....: https://github.com/ronicarvalho'.
-           DISPLAY '    EMAIL......: roni.carvalho@protonmail.com'.
-           DISPLAY ' '.
-```
-
+<!-- LANGUAGE NAV -->
 <div align="center">
-  <i>"Writing code with the precision of a mainframe, running it with the speed of the cloud."</i>
+  <a href="#english"><img src="https://flagcdn.com/24x18/us.png" alt="USA" valign="middle"> <b>English</b></a> &nbsp;|&nbsp; 
+  <a href="#português"><img src="https://flagcdn.com/24x18/br.png" alt="Brazil" valign="middle"> <b>Português</b></a>
 </div>
+
+<br />
+
+<!-- TECH STACK ICONS -->
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=html,dotnet,cs,java,spring,nodejs,nestjs,nextjs,npm,ts,react,vite,python,go,visualstudio,vscode,rider,idea,linux,redhat,debian,windows,powershell,postgres,mysql,mongodb,redis,hibernate,gherkin,postman,markdown,kafka,rabbitmq,docker,kubernetes,jenkins,aws,gcp,azure,git,github,gitlab,grafana,elasticsearch,prometheus" alt="Tech Stack" />
+</div>
+
+<hr />
+
+<h2 id="english"><img src="https://flagcdn.com/24x18/us.png" alt="USA" valign="middle"> English</h2>
+
+### Hi, I'm Roni Carvalho
+
+I am a Senior Software Engineer and Systems Architect with over 25 years of hands-on experience designing and modernizing high-scale enterprise software, transactional platforms, and data infrastructure. Throughout my career, I've built systems for heavily regulated industries including banking, private wealth management, pension funds, and large-scale retail.
+
+My core technical foundation is built on Event-Driven Architecture (EDA), microservices, Site Reliability Engineering (SRE), and software testing methodologies (TDD/BDD). Recently, my work has been heavily centered on data engineering, real-time data streaming with Apache Kafka, automated ETL/ELT pipelines, and practical applications of Generative AI and RAG architectures.
+
+### What I do & value
+
+* **System Architecture & Scale:** Designing resilient, decoupled backend platforms using Hexagonal Architecture (Ports & Adapters), microservices, and event streaming.
+* **Data & Engineering Quality:** Deep experience with relational (MSSQL, PostgreSQL, Oracle) and NoSQL databases (MongoDB, Redis), query optimization, and streaming integrations.
+* **Engineering Standards:** Strong advocate for TDD, BDD, Clean Code, automated testing (unit, integration, load testing with JMeter), and CI/CD automation.
+* **Continuous Growth:** Active learner with over 120+ courses and bootcamps completed recently, covering Cloud Native tools, Go, Java, AI Agents, and Security.
+
+### Looking for
+
+* Opportunities to architect and build complex, challenging, and high-impact systems in software and data engineering.
+* Environments that value technical rigor, continuous learning, and architectural quality.
+
+### Outside of Tech
+
+* Long-term goal: After a long career behind the keyboard, my retirement plan is to step onto the mats as a Jiu-Jitsu instructor, teaching strategy, discipline, and resilience.
+
+### Contact & Links
+
+* **Email:** roni.carvalho@protonmail.com
+* **LinkedIn:** [linkedin.com/in/ronicarvalho](https://www.linkedin.com/in/ronicarvalho)
+* **Location:** Birigui, SP - Brazil
+
+<hr />
+
+<h2 id="português"><img src="https://flagcdn.com/24x18/br.png" alt="Brazil" valign="middle"> Português</h2>
+
+### Olá, sou o Roni Carvalho
+
+Sou Engenheiro de Software Sênior e Arquiteto de Sistemas com mais de 25 anos de experiência prática no desenvolvimento e modernização de ecossistemas corporativos de alta escala, plataformas transacionais e infraestrutura de dados. Ao longo da minha trajetória, atuei em setores fortemente regulados como banking, private banking, previdência social e varejo/e-commerce.
+
+Minha base técnica é fundamentada em Arquitetura Orientada a Eventos (EDA), microsserviços, Site Reliability Engineering (SRE) e práticas rigorosas de testes de software (TDD/BDD). Atualmente, meu foco de atuação e estudo está concentrado em engenharia de dados, streaming de dados em tempo real com Apache Kafka, pipelines de ETL/ELT e aplicação prática de IA Generativa e arquiteturas RAG.
+
+### Minha atuação e diferenciais
+
+* **Arquitetura e Escala:** Projeto de plataformas backend resilientes e desacopladas utilizando Arquitetura Hexagonal (Ports & Adapters), microsserviços e mensageria.
+* **Dados e Performance:** Ampla bagagem em bancos de dados relacionais (MSSQL, PostgreSQL, Oracle) e NoSQL (MongoDB, Redis), incluindo otimização crítica de consultas e integração de dados.
+* **Qualidade de Engenharia:** Aplicação constante de TDD, BDD, Clean Code, automação de testes (unitários, integração e carga com JMeter) e pipelines de CI/CD.
+* **Aprendizado Contínuo:** Perfil autodidata com mais de 120 cursos e bootcamps concluídos recentemente, cobrindo ecossistemas Cloud Native, Go, Java, Agentes de IA e Segurança.
+
+### O que busco
+
+* Desafios focados na arquitetura e desenvolvimento de projetos complexos, inovadores e de grande impacto em engenharia de software e dados.
+* Ambientes que valorizem rigor técnico, qualidade de código e evolução contínua.
+
+### Fora do código
+
+* Meta de longo prazo: Na aposentadoria, meu objetivo é transitar da tecnologia para os tatames como professor de Jiu-Jitsu, ensinando disciplina, estratégia e resiliência.
+
+### Contato
+
+* **E-mail:** roni.carvalho@protonmail.com
+* **LinkedIn:** [linkedin.com/in/ronicarvalho](https://www.linkedin.com/in/ronicarvalho)
+* **Localização:** Birigui, SP - Brasil
